@@ -8,11 +8,13 @@ const list =  async(req,res) =>{
 
 
 const create = async (req,res) =>{
-    const {name,email,password} = req.body;
+    const {name,email,contact,role,password} = req.body;
     try{
         const doc = new User();
         doc.name = name;
         doc.email = email;
+        doc.contact = contact;
+        doc.role = role;
         doc.password = password;
         await doc.save();
 
@@ -37,10 +39,10 @@ const create = async (req,res) =>{
 
 const update = async(req,res) =>{
     const id = req.params.id;
-    const {name,email,password} = req.body;
+    const {name,email,contact} = req.body;
     try{
         const doc = await User.findByIdAndUpdate(id,{
-            name:name,email:email,password:password
+            name:name,email:email,contact:contact
         })
         res.status(200).json({message:"Updated Succussfully"});
     }

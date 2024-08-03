@@ -1,6 +1,6 @@
 
 
-    const productRouter = require('./routes/productRoute');
+
     
     //Express
 const express = require("express");
@@ -30,6 +30,5 @@ app.use("/api/auth", authRouter);
 module.exports = app;
 
  
-    
-    app.use('/api/product', productRouter);
+
     

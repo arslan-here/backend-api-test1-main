@@ -5,6 +5,8 @@ const { Schema } = mongoose;
 const UserSchema = new Schema({
   name: String,
   email: String,
+  contact:String,
+  role:String, 
   password: String,
   createdat: { type: Date, default: Date.now },
 });

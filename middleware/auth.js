@@ -88,7 +88,7 @@ const logout = (req, res) => {
 
 
 const register = async (req,res)=>{
-    const {name,email,password} = req.body;
+    const {name,email,password,role} = req.body;
     try{
 
         const checkemail = await User.findOne({email});
@@ -99,6 +99,7 @@ const register = async (req,res)=>{
         const doc = new User();
         doc.name = name;
         doc.email = email;
+        doc.role = role;
         doc.password = password;
         await doc.save();
 

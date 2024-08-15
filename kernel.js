@@ -1,4 +1,10 @@
 
+    const ExhibitorRouter = require('./routes/ExhibitorRoute');
+    
+
+    
+    const DashboardRouter = require('./routes/DashboardRoute');
+    
     const SupportRouter = require('./routes/SupportRoute');
     
     const ExpoRouter = require('./routes/ExpoRoute');
@@ -40,4 +46,9 @@ module.exports = app;
     app.use('/api/expo', ExpoRouter);
     
     app.use('/api/support', SupportRouter);
+    
+    app.use('/api/dashboard', DashboardRouter);
+    
+
+    app.use('/api/exhibitor', ExhibitorRouter);
     

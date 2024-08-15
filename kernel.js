@@ -1,4 +1,6 @@
 
+    const SupportRouter = require('./routes/SupportRoute');
+    
     const ExpoRouter = require('./routes/ExpoRoute');
     
 
@@ -36,4 +38,6 @@ module.exports = app;
     
 
     app.use('/api/expo', ExpoRouter);
+    
+    app.use('/api/support', SupportRouter);
     
